@@ -1,0 +1,6 @@
+# Require specific reviewers for sensitive areas
+/SPEC/*            @docs-lead @repo-owner
+/docs/templates/*  @docs-lead
+/docs/goldens/*    @docs-lead
+/SPEC/schemas/*    @repo-owner
+/.github/workflows/* @repo-owner
