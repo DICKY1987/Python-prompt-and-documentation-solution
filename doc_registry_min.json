@@ -1,0 +1,24 @@
+{
+  "documents": [
+    {
+      "id": "DOC-SRS",
+      "title": "Software Requirements Specification",
+      "template": "docs/templates/SRS_template.md",
+      "golden": "docs/goldens/SRS_golden.md",
+      "output": "docs/out/SRS.md",
+      "sections_required": [
+        "SEC-INTRO",
+        "SEC-OVERVIEW",
+        "SEC-REQS",
+        "SEC-GLOSSARY",
+        "SEC-TRACE"
+      ],
+      "sources": {
+        "requirements": "docs/sources/requirements.yaml",
+        "tests": "docs/sources/tests.yaml",
+        "adrs": "docs/sources/adrs",
+        "glossary": "docs/sources/glossary.yaml"
+      }
+    }
+  ]
+}

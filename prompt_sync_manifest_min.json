@@ -1,0 +1,19 @@
+{
+  "coverage_threshold": 0.95,
+  "paths": {
+    "spec": "prompt/PromptSpec.yaml",
+    "runtime_prompt": "prompt/Runtime_Prompt.md",
+    "coverage_script": "prompt/prompt_coverage_checker.py",
+    "sync_report": "prompt/prompt_sync_report.md",
+    "lockfile": "prompt/prompt.lock.json",
+    "badge_json": "prompt/prompt_badge.json"
+  },
+  "structural": {
+    "max_chars": 15000,
+    "banned_phrases": [
+      "we will try",
+      "maybe",
+      "sort of"
+    ]
+  }
+}

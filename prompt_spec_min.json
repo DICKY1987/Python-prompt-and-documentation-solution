@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "id": "PROMPT-SPEC-EX",
+    "version": "1.0.0",
+    "do_not_drop": [
+      "INV-001"
+    ],
+    "required_techniques": [
+      "TEC-101"
+    ]
+  },
+  "sections": [
+    {
+      "id": "OBJ-001",
+      "title": "Objective",
+      "content": "Produce unified prompt."
+    }
+  ]
+}

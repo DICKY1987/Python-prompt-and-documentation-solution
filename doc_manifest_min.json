@@ -1,0 +1,15 @@
+{
+  "coverage_threshold": 0.95,
+  "outline_must_match_golden": true,
+  "traceability_required": true,
+  "structural": {
+    "banned_phrases": [
+      "we will try",
+      "maybe",
+      "sort of"
+    ]
+  },
+  "report": "docs/out/doc_sync_report.md",
+  "badge": "docs/out/doc_badge.json",
+  "lock": "docs/out/doc_lock.json"
+}

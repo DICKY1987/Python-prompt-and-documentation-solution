@@ -1,0 +1,29 @@
+{
+  "invariants": [
+    {
+      "id": "INV-001",
+      "text": "Do-Not-Drop list present."
+    }
+  ],
+  "techniques": [
+    {
+      "id": "TEC-101",
+      "name": "Plan-then-Act"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "OUT-001",
+      "rule": "Emit structured sections with IDs."
+    }
+  ],
+  "tests": [
+    {
+      "id": "TST-001",
+      "goal": "Coverage \u2265 threshold",
+      "must_reference": [
+        "[INV-001]"
+      ]
+    }
+  ]
+}
