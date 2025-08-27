@@ -1,0 +1,8 @@
+# 1. Objective  [OBJ-001]
+# 2. Roles & Modes  [ROL-001]
+# 3. Inputs  [INP-001]
+# 4. Process (Agentic Workflow)  [PRC-001]
+# 5. Outputs  [OUT-001]
+# 6. Guardrails  [GRD-001]
+# 7. References  [REF-001]
+# 8. Changelog  [CHG-001]

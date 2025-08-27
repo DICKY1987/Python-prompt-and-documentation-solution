@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DocManifest",
+  "type": "object",
+  "required": [
+    "coverage_threshold",
+    "report",
+    "badge"
+  ],
+  "properties": {
+    "coverage_threshold": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "outline_must_match_golden": {
+      "type": "boolean"
+    },
+    "traceability_required": {
+      "type": "boolean"
+    },
+    "structural": {
+      "type": "object",
+      "properties": {
+        "banned_phrases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "report": {
+      "type": "string"
+    },
+    "badge": {
+      "type": "string"
+    },
+    "lock": {
+      "type": "string"
+    }
+  }
+}

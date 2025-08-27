@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PromptChecklist",
+  "type": "object",
+  "required": [
+    "invariants",
+    "techniques",
+    "outputs",
+    "tests"
+  ],
+  "properties": {
+    "invariants": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "text"
+        ]
+      }
+    },
+    "techniques": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name"
+        ]
+      }
+    },
+    "outputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "rule"
+        ]
+      }
+    },
+    "tests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "goal"
+        ]
+      }
+    }
+  }
+}

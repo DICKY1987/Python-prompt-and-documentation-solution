@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DocRegistry",
+  "type": "object",
+  "required": [
+    "documents"
+  ],
+  "properties": {
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "template",
+          "golden",
+          "output",
+          "sections_required",
+          "sources"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "template": {
+            "type": "string"
+          },
+          "golden": {
+            "type": "string"
+          },
+          "output": {
+            "type": "string"
+          },
+          "sections_required": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "sources": {
+            "type": "object",
+            "properties": {
+              "requirements": {
+                "type": "string"
+              },
+              "tests": {
+                "type": "string"
+              },
+              "adrs": {
+                "type": "string"
+              },
+              "glossary": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

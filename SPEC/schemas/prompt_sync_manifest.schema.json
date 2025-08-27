@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PromptSyncManifest",
+  "type": "object",
+  "required": [
+    "coverage_threshold",
+    "paths"
+  ],
+  "properties": {
+    "coverage_threshold": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "structural": {
+      "type": "object",
+      "properties": {
+        "max_chars": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "banned_phrases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "paths": {
+      "type": "object",
+      "required": [
+        "spec",
+        "runtime_prompt"
+      ],
+      "properties": {
+        "spec": {
+          "type": "string"
+        },
+        "patches": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "runtime_prompt": {
+          "type": "string"
+        },
+        "coverage_script": {
+          "type": "string"
+        },
+        "eval_harness": {
+          "type": "string"
+        },
+        "sync_report": {
+          "type": "string"
+        },
+        "lockfile": {
+          "type": "string"
+        },
+        "badge_json": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
