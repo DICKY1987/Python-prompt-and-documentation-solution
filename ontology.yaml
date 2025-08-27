@@ -1,0 +1,19 @@
+namespaces:
+  REQ: Requirement
+  ADR: Architecture Decision Record
+  IFC: Interface Contract
+  PROC: Process/Runbook
+  SEC: Section
+  TST: Test Case
+  EXM: Example
+  FIG: Figure
+  GLO: Glossary Term
+rules:
+  id_format: ^(REQ|ADR|IFC|PROC|SEC|TST|EXM|FIG|GLO)-\d{3,}$
+  crossref_fields:
+  - refs
+  - links
+  - covers
+  required_for_srs:
+  - REQ
+  - GLO

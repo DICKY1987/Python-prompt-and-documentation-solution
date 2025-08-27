@@ -1,0 +1,5 @@
+banned_phrases:
+- we will try
+- maybe
+- sort of
+max_section_length_chars: 5000

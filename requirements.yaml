@@ -1,0 +1,20 @@
+items:
+- id: REQ-001
+  title: Unified Source-of-Truth for Docs
+  text: All project documentation must be authored in structured YAML with stable
+    IDs and compiled into Markdown/PDF as build artifacts.
+  refs:
+  - ADR-001
+- id: REQ-002
+  title: Traceability Matrix
+  text: Each requirement must link to at least one test case and any related decision
+    records.
+  refs:
+  - TST-001
+  - ADR-001
+- id: REQ-003
+  title: Standardized Output Using Goldens
+  text: "Each document type must have a golden exemplar; builds must match the golden\u2019\
+    s outline and section labels."
+  refs:
+  - EXM-001

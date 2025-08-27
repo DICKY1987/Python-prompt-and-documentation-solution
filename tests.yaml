@@ -1,0 +1,6 @@
+items:
+- id: TST-001
+  title: Requirement-to-Test Mapping Exists
+  text: Verify that REQ-002 is covered by at least one test case.
+  covers:
+  - REQ-002

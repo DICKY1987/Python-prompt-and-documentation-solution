@@ -1,0 +1,10 @@
+items:
+- id: ADR-001
+  title: Structured Docs + Compile-Time Generation
+  status: Accepted
+  context: Docs are fragmented when edited directly.
+  decision: Author in YAML with IDs, compile to outputs, validate in CI.
+  consequences: Deterministic builds, easy diffs, no hand-edits to outputs.
+  refs:
+  - REQ-001
+  - REQ-002

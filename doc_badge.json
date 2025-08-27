@@ -1,0 +1,14 @@
+{
+  "status": "fail",
+  "docs": [
+    {
+      "id": "DOC-SRS",
+      "outline_ok": true,
+      "missing_sections": [],
+      "trace_coverage": 0.3333333333333333,
+      "trace_ok": false,
+      "issues": [],
+      "output": "docs/out/SRS.md"
+    }
+  ]
+}

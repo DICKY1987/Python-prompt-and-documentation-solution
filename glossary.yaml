@@ -1,0 +1,7 @@
+items:
+- id: GLO-001
+  term: SSOT
+  definition: Single Source of Truth for documentation and prompts.
+- id: GLO-002
+  term: Golden
+  definition: A canonical example output used for standardization.
