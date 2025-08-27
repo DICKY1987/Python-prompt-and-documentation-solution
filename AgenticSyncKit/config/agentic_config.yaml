@@ -1,0 +1,17 @@
+# config/agentic_config.yaml
+mode: "sandbox"
+repo_root: "."
+code_globs:
+  - "src/**/*.py"
+  - "tools/**/*.py"
+  - "docs/**/*.py"
+reviewer:
+  enable: true
+  output_patch: "agents/out/reviewer.patch"
+verifier:
+  enable: true
+git:
+  branch: "feature/agentic-sync"
+  commit_message: "feat(agents): agentic sync update"
+  push: true
+  open_pr: false
