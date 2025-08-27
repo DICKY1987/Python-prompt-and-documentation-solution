@@ -1,0 +1,40 @@
+# Summary
+category,total,present,coverage,missing,present_ids
+invariants,8,0,0.0,"['INV-001', 'INV-002', 'INV-003', 'INV-004', 'INV-005', 'INV-006', 'INV-007', 'INV-008']",[]
+techniques,7,0,0.0,"['TEC-101', 'TEC-203', 'TEC-304', 'TEC-402', 'TEC-451', 'TEC-480', 'TEC-499']",[]
+outputs,3,3,1.0,[],"['OUT-SRS-001', 'OUT-APP-001', 'OUT-PKG-001']"
+tests,5,5,1.0,[],
+
+# Per-Item
+category,id,found
+invariants,INV-001,False
+invariants,INV-002,False
+invariants,INV-003,False
+invariants,INV-004,False
+invariants,INV-005,False
+invariants,INV-006,False
+invariants,INV-007,False
+invariants,INV-008,False
+techniques,TEC-101,False
+techniques,TEC-203,False
+techniques,TEC-304,False
+techniques,TEC-402,False
+techniques,TEC-451,False
+techniques,TEC-480,False
+techniques,TEC-499,False
+outputs,OUT-SRS-001,True
+outputs,OUT-APP-001,True
+outputs,OUT-PKG-001,True
+tests,TST-01,True
+tests,TST-02,True
+tests,TST-03,True
+tests,TST-04,True
+tests,TST-05,True
+
+# Tests
+test_id,must_reference,missing,passed
+TST-01,['[OUT-SRS-001]'],[],True
+TST-02,"['[PRC-CONF-001]', '[PRC-DSN-001]', '[OUT-APP-001]']",[],True
+TST-03,"['[PRC-QG-001]', '[OUT-APP-001]']",[],True
+TST-04,['[OUT-APP-001]'],[],True
+TST-05,['[PRC-DAV-001]'],[],True

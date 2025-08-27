@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PromptSpec (minimal)",
+  "type": "object",
+  "required": [
+    "meta",
+    "sections"
+  ],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": [
+        "id",
+        "version",
+        "do_not_drop",
+        "required_techniques"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "do_not_drop": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "required_techniques": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/section"
+      }
+    }
+  },
+  "$defs": {
+    "section": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "content"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/section"
+          }
+        }
+      }
+    }
+  }
+}

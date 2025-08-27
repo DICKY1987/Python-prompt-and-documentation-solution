@@ -1,0 +1,94 @@
+version: 1.0.0
+spec_id: PROMPT-SPEC-AGENT-SRS
+
+quality_gates:
+  coverage_min: 0.95
+  zero_unresolved_conflicts: true
+  ieee_830_numbering_required: true
+  traceability_required: true
+  observability_required: true
+
+invariants:
+  - id: INV-001
+    text: "Do-Not-Drop list present and unchanged across revisions."
+    evidence: "[GRD-001]"
+  - id: INV-002
+    text: "External claims use web research with inline citations."
+    evidence: "[PRC-VAL-001]"
+  - id: INV-003
+    text: "Ask for confirmation before high-impact actions."
+    evidence: "[ROL-AM-001]"
+  - id: INV-004
+    text: "Explicitly request uploads when inputs are missing."
+    evidence: "[INP-001][CON-001]"
+  - id: INV-005
+    text: "Strict IEEE 830 numbering and unified glossary enforced."
+    evidence: "[PRC-QG-001]"
+  - id: INV-006
+    text: "Zero unresolved conflicts or explicitly deferred with SME packet."
+    evidence: "[PRC-QG-001][PRC-ENH-001]"
+  - id: INV-007
+    text: "Full traceability for final and rejected items."
+    evidence: "[PRC-DSN-001][OUT-APP-001]"
+  - id: INV-008
+    text: "Coverage ≥ 95% and observability metrics logged."
+    evidence: "[PRC-QG-001]"
+
+techniques:
+  - id: TEC-101
+    name: "Plan-then-Act (structured phases)"
+    evidence: "[PRC-001][PRC-ING-001]"
+  - id: TEC-203
+    name: "Dual-agent Verify/Refine loop"
+    evidence: "[PRC-DAV-001]"
+  - id: TEC-304
+    name: "Self-repair / retry-on-failure"
+    evidence: "[PRC-DAV-001]"
+  - id: TEC-402
+    name: "End-to-end Traceability"
+    evidence: "[PRC-ING-001][PRC-DSN-001][OUT-APP-001]"
+  - id: TEC-451
+    name: "External validation with citations"
+    evidence: "[PRC-VAL-001]"
+  - id: TEC-480
+    name: "Observability (metrics, coverage, consensus)"
+    evidence: "[PRC-QG-001]"
+  - id: TEC-499
+    name: "Prompt-injection defense & safe browsing"
+    evidence: "[ROL-AM-001]"
+
+outputs:
+  - id: OUT-SRS-001
+    rule: "Final SRS includes IEEE 830 sections 1–3."
+    evidence: "[OUT-SRS-001]"
+  - id: OUT-APP-001
+    rule: "Appendices A–D present and populated."
+    evidence: "[OUT-APP-001]"
+  - id: OUT-PKG-001
+    rule: "Single Markdown; large matrices may be CSV/MD attachments."
+    evidence: "[OUT-PKG-001]"
+
+tests:
+  - id: TST-01
+    goal: "Given overlapping docs, produces a unified IEEE 830 SRS with numbering."
+    must_reference: ["[OUT-SRS-001]"]
+  - id: TST-02
+    goal: "Detects and logs conflicts with rationale and citations."
+    must_reference: ["[PRC-CONF-001]", "[PRC-DSN-001]", "[OUT-APP-001]"]
+  - id: TST-03
+    goal: "Achieves ≥95% coverage; reports duplicates removed."
+    must_reference: ["[PRC-QG-001]", "[OUT-APP-001]"]
+  - id: TST-04
+    goal: "Includes traceability matrix mapping final reqs to sources."
+    must_reference: ["[OUT-APP-001]"]
+  - id: TST-05
+    goal: "Runs dual-agent loop and self-repair before escalation."
+    must_reference: ["[PRC-DAV-001]"]
+
+# Optional: a place to record quick coverage checks per run
+coverage_map:
+  last_run:
+    total_source_requirements: 0
+    final_requirements: 0
+    duplicates_removed: 0
+    coverage_ratio: 0.0

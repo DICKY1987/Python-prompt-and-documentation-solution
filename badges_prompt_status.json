@@ -1,0 +1,10 @@
+{
+  "coverage": {
+    "invariants": 1.0,
+    "techniques": 0.7142857142857143,
+    "outputs": 1.0,
+    "tests": 0.8
+  },
+  "structural_ok": true,
+  "status": "fail"
+}

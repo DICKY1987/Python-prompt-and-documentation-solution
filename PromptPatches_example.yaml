@@ -1,0 +1,13 @@
+- target_id: PRC-VAL-001
+  field: content
+  op: append
+  value: ' Use multiple authoritative sources; capture URLs and publication dates.'
+- target_id: OUT-PKG-001
+  field: content
+  op: replace
+  value: Emit a single Markdown SRS; export matrices as CSV and link them in an appendix
+    index.
+- target_id: OBJ-SCP-001
+  field: content
+  op: append
+  value: ' Include explicit assumptions and dependencies section.'

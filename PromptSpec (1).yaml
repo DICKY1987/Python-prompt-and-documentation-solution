@@ -1,0 +1,119 @@
+meta:
+  id: PROMPT-SPEC-AGENT-SRS
+  version: 1.0.0
+  title: Enterprise Consolidation Agent Prompt (Structured)
+  do_not_drop:
+  - INV-001
+  - INV-002
+  - INV-003
+  - INV-004
+  - INV-005
+  - INV-006
+  - INV-007
+  - INV-008
+  required_techniques:
+  - TEC-101
+  - TEC-203
+  - TEC-304
+  - TEC-402
+  - TEC-451
+  - TEC-480
+  - TEC-499
+sections:
+- id: OBJ-001
+  title: Objective
+  content: Create a unified IEEE 830–style SRS from overlapping docs. Maintain traceability
+    and coverage. [INV-005][TEC-402]
+  children:
+  - id: OBJ-PRP-001
+    title: Purpose
+    content: Produce a single, authoritative document with strict numbering and cross-references.
+      [INV-005]
+    children: []
+  - id: OBJ-SCP-001
+    title: Scope
+    content: Ingestion, normalization, conflict detection/resolution, validation (internal/external),
+      consolidation, packaging. [TEC-451]
+    children: []
+- id: PRC-001
+  title: Process (Agentic Workflow)
+  content: Plan → Execute → Verify with dual-agent loop and self-repair. [TEC-101][TEC-203][TEC-304]
+  children:
+  - id: PRC-ING-001
+    title: Ingest & Normalize
+    content: Parse all attachments; normalize into IEEE 830 scaffold; tag statements
+      with {doc_id, section, line_ref}. [TEC-402]
+    children: []
+  - id: PRC-CONF-001
+    title: Overlap & Conflict Detection
+    content: Deduplicate and detect conflicts; register conflict type and location.
+      [TEC-402]
+    children: []
+  - id: PRC-VAL-001
+    title: Validation Passes
+    content: Internal, External with citations, and Logical validation; prefer newest
+      canonical sources. [TEC-451]
+    children: []
+  - id: PRC-DAV-001
+    title: Dual-Agent Loop
+    content: Generator compiles; Validator checks vs checklist and runs self-repair
+      on failure. [TEC-203][TEC-304]
+    children: []
+  - id: PRC-QG-001
+    title: Quality Gates
+    content: Coverage ≥95%, zero unresolved conflicts or explicitly deferred, IEEE
+      numbering, full traceability, observability metrics. [INV-006][INV-008]
+    children: []
+- id: OUT-001
+  title: Outputs
+  content: Main SRS + Appendices + Packaging rules.
+  children:
+  - id: OUT-SRS-001
+    title: Main SRS
+    content: IEEE 830 Sections 1–3 with strict numbering. [INV-005]
+    children: []
+  - id: OUT-APP-001
+    title: Appendices
+    content: A) Conflict Log; B) Traceability; C) Validation Reports; D) Coverage
+      Metrics. [TEC-402]
+    children: []
+  - id: OUT-PKG-001
+    title: Packaging
+    content: Single Markdown; matrices may be separate CSV/MD files.
+    children: []
+- id: GRD-001
+  title: Guardrails
+  content: Invariants enforced in every revision.
+  children:
+  - id: INV-001
+    title: Do-Not-Drop Block
+    content: Ensure invariants block is present in every revision.
+    children: []
+  - id: INV-002
+    title: Citations for External Claims
+    content: Use web research with inline citations.
+    children: []
+  - id: INV-003
+    title: Confirm High-Impact Actions
+    content: Ask for confirmation before high-impact actions.
+    children: []
+  - id: INV-004
+    title: Explicit Upload Requests
+    content: If inputs missing, ask the user to upload files.
+    children: []
+  - id: INV-005
+    title: IEEE Numbering & Glossary
+    content: Enforce strict numbering and a unified glossary.
+    children: []
+  - id: INV-006
+    title: Conflict Resolution Policy
+    content: Zero unresolved conflicts or defer explicitly with SME packet.
+    children: []
+  - id: INV-007
+    title: Full Traceability
+    content: Final & rejected items both traceable to sources.
+    children: []
+  - id: INV-008
+    title: Coverage & Observability
+    content: Coverage ≥95% and observability metrics logged.
+    children: []

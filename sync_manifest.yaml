@@ -1,0 +1,20 @@
+project_name: agent-srs-prompt
+coverage_threshold: 0.95
+structural:
+  max_chars: 15000
+  banned_phrases:
+  - we will try
+  - maybe
+  - sort of
+paths:
+  spec: PromptSpec.yaml
+  checklist: Prompt_Checklist_v1.0.yaml
+  patches:
+  - PromptPatches_example.yaml
+  compiler: compile_prompt.py
+  runtime_prompt: Runtime_Prompt.md
+  coverage_script: prompt_coverage_checker.py
+  eval_harness: eval_harness.py
+  sync_report: sync_report.md
+  lockfile: prompt.lock.json
+  badge_json: badges_prompt_status.json
