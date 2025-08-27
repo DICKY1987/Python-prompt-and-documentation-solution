@@ -1,0 +1,5 @@
+items:
+- id: TEC-101
+  name: Plan-then-Act
+  doc_anchor: '[SEC-TECH]'
+  description: Plan before acting.

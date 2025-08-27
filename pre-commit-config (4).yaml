@@ -1,0 +1,42 @@
+repos:
+  - repo: local
+    hooks:
+      - id: project-sync
+        name: Project Sync (Prompts + Docs)
+        entry: python project_sync_orchestrator.py
+        language: system
+        pass_filenames: false
+
+- repo: local
+  hooks:
+    - id: project-sync
+      name: Project Sync (Prompts + Docs)
+      entry: python project_sync_orchestrator.py
+      language: system
+      pass_filenames: false
+    - id: spec-validate-live
+      name: SPEC schema validation (live files)
+      entry: python tools/validate_live_configs.py
+      language: system
+      pass_filenames: false
+    - id: id-integrity
+      name: Global ID integrity check
+      entry: python tools/id_integrity_check.py
+      language: system
+      pass_filenames: false
+    - id: no-manual-artifacts
+      name: Forbid manual edits to build artifacts
+      entry: python tools/enforce_no_manual_edits.py
+      language: system
+      pass_filenames: false
+    - id: sync-fingerprint
+      name: Sync fingerprint (detect dropped IDs)
+      entry: python tools/fingerprint_sync.py
+      language: system
+      pass_filenames: false
+
+- id: cross-domain-techniques
+  name: Cross-domain techniques documented
+  entry: python tools/cross_domain_technique_check.py
+  language: system
+  pass_filenames: false

@@ -12,3 +12,6 @@ High-level system overview and scope.
 
 # 5. Traceability Matrix  [SEC-TRACE]
 {{TRACEABILITY_TABLE}}
+
+# 6. Techniques  [SEC-TECH]
+{{TECHNIQUES_TABLE}}

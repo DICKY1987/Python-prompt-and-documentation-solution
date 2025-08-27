@@ -12,3 +12,6 @@ The system compiles structured sources into deterministic outputs.
 
 # 5. Traceability Matrix  [SEC-TRACE]
 (Compiler inserts REQ ↔ TST coverage.)
+
+# 6. Techniques  [SEC-TECH]
+(Compiler inserts a table listing technique IDs and references.)
